@@ -4,6 +4,7 @@
         value: "",
         name: "not-set",
         question: "Question not set",
+        subtext: "",
     };
     let style = `<style>
         input[type="radio"] {
@@ -19,9 +20,12 @@
     }</style>`;
 </script>
 
-<div class="div-input">
+<div class="div-input block">
     {#if input.type == "radio"}
-        <p>{input.question}</p>
+        <div class="vertical">
+            <p>{input.question}</p>
+            <span>{input.subtext || ""}</span>
+        </div>
         <div>
             {@html style}
             <input
@@ -58,9 +62,9 @@
             }}
         />
     {:else if input.type == "text"}
-    <p>
-        <label for={`${input.name}-value`}>{input.question}</label>
-    </p>
+        <p>
+            <label for={`${input.name}-value`}>{input.question}</label>
+        </p>
         <input type="text" id={`${input.name}-value`} bind:value={input.value} />
     {/if}
 </div>
@@ -74,6 +78,8 @@
     }
     .label-style {
         padding: 5px;
+        margin: 1px;
+        display: inline-block;
         cursor: pointer;
         border: 1px solid black;
     }

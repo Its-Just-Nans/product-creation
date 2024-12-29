@@ -68,8 +68,8 @@
         <div class="block last">
             <h3>Around the product</h3>
             <div class="block noborder vertical last">
-                {#each Object.keys($product.arroundProduct) as key}
-                    <Input bind:input={$product.arroundProduct[key]} />
+                {#each Object.keys($product.aroundProduct) as key}
+                    <Input bind:input={$product.aroundProduct[key]} />
                 {/each}
             </div>
         </div>
@@ -96,6 +96,14 @@
             <div class="block noborder vertical last">
                 {#each Object.keys($product.product) as key}
                     <Input bind:input={$product.product[key]} />
+                {/each}
+            </div>
+        </div>
+        <div class="block">
+            <h3>Business</h3>
+            <div class="block noborder vertical last">
+                {#each Object.keys($product.business) as key}
+                    <Input bind:input={$product.business[key]} />
                 {/each}
             </div>
         </div>

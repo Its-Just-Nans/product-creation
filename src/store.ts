@@ -20,7 +20,7 @@ export const product = writable({
             name: "safe-children",
             value: "",
         },
-        healthRealted: {
+        healthRelated: {
             type: "radio",
             question: "Is this product health-related?",
             name: "health-related",
@@ -113,7 +113,7 @@ export const product = writable({
             value: "",
         },
     },
-    arroundProduct: {
+    aroundProduct: {
         service: {
             type: "radio",
             question: "Service around the product ?",
@@ -126,10 +126,10 @@ export const product = writable({
             name: "it",
             value: "",
         },
-        optionnal: {
+        optional: {
             type: "radio",
-            question: "Does your product has optionnal components?",
-            name: "optionnal",
+            question: "Does your product has optional components?",
+            name: "optional",
             value: "",
         },
         wrapper: {
@@ -301,7 +301,7 @@ export const product = writable({
             value: "",
         },
     },
-    buisiness: {
+    business: {
         trendForesight: {
             type: "radio",
             question: "Trend foresight?",
@@ -358,7 +358,7 @@ export const product = writable({
         },
         roadmap: {
             type: "radio",
-            question: "Roadmap for the product what it's futur, the ameliorations ?",
+            question: "Roadmap for the product what it's future, the ameliorations ?",
             name: "roadmap",
             value: "",
         },
@@ -372,7 +372,7 @@ export const product = writable({
     product: {
         lifeCycle: {
             type: "radio",
-            question: "Roadmap for the product life, from creation to destruction (recylcing) Lifecycle ?",
+            question: "Roadmap for the product life, from creation to destruction (recycling) Lifecycle ?",
             name: "life-cycle",
             value: "",
         },
@@ -382,16 +382,16 @@ export const product = writable({
             name: "swot",
             value: "",
         },
-        confort: {
+        comfort: {
             type: "radio",
-            question: "Confort of the product?",
-            name: "confort",
+            question: "Comfort of the product?",
+            name: "comfort",
             value: "",
         },
-        accesiibility: {
+        accessibility: {
             type: "radio",
-            question: "Accesiibility of the product?",
-            name: "accesiibility",
+            question: "Accessibility of the product?",
+            name: "accessibility",
             value: "",
         },
         stepByStep: {

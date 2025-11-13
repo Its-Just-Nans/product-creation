@@ -36,37 +36,49 @@
         {#if $product.isVirtual.value !== ""}
             <div class="block flex1 align last">
                 {#if $product.isVirtual.value === "true"}
-                    <div class="flex1 bright">
+                    <div class="flex1">
                         <h2 class="wei">Virtual product</h2>
                     </div>
                 {:else if $product.isVirtual.value === "false"}
-                    <div class="flex1 bright">
-                        <div class="block">
-                            <p class="wei">Physical product</p>
+                    <div>
+                        <div>
+                            <div class="block">
+                                <p class="wei">Physical product</p>
+                            </div>
+
+                            <div class="flex1">
+                                <p>Product location</p>
+                                <div class="block noborder">
+                                    <div class="flex1">
+                                        <Map />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="block col">
-                            <p>Product location</p>
-                            <Map />
-                        </div>
-                    </div>
-                    <div class="block noborder vertical last">
-                        {#each Object.keys($product.physical) as key}
-                            <Input bind:input={$product.physical[key]} />
-                        {/each}
                     </div>
                 {/if}
             </div>
         {/if}
+        {#if $product.isVirtual.value === "false"}
+            <div class="block noborder vertical last">
+                {#each Object.keys($product.physical) as key}
+                    <Input bind:input={$product.physical[key]} />
+                {/each}
+            </div>
+        {/if}
         <div class="block">
-            <h3>Cost</h3>
-
+            <div class="block-title">
+                <h3>Cost</h3>
+            </div>
             <div class="block noborder vertical last">
                 <Input bind:input={$product.subscription} />
                 <Input bind:input={$product.price} />
             </div>
         </div>
         <div class="block last">
-            <h3>Around the product</h3>
+            <div class="block-title">
+                <h3>Around the product</h3>
+            </div>
             <div class="block noborder vertical last">
                 {#each Object.keys($product.aroundProduct) as key}
                     <Input bind:input={$product.aroundProduct[key]} />
@@ -74,7 +86,9 @@
             </div>
         </div>
         <div class="block">
-            <h3>Real life usage</h3>
+            <div class="block-title">
+                <h3>Real life usage</h3>
+            </div>
             <div class="block noborder vertical last">
                 {#each Object.keys($product.realLife) as key}
                     <Input bind:input={$product.realLife[key]} />
@@ -83,8 +97,9 @@
         </div>
 
         <div class="block">
-            <h3>Design</h3>
-
+            <div class="block-title">
+                <h3>Design</h3>
+            </div>
             <div class="block noborder vertical last">
                 {#each Object.keys($product.design) as key}
                     <Input bind:input={$product.design[key]} />
@@ -92,7 +107,9 @@
             </div>
         </div>
         <div class="block">
-            <h3>Product evaluation</h3>
+            <div class="block-title">
+                <h3>Product evaluation</h3>
+            </div>
             <div class="block noborder vertical last">
                 {#each Object.keys($product.product) as key}
                     <Input bind:input={$product.product[key]} />
@@ -100,7 +117,9 @@
             </div>
         </div>
         <div class="block">
-            <h3>Business</h3>
+            <div class="block-title">
+                <h3>Business</h3>
+            </div>
             <div class="block noborder vertical last">
                 {#each Object.keys($product.business) as key}
                     <Input bind:input={$product.business[key]} />
@@ -109,7 +128,9 @@
         </div>
     {:else}
         <div class="block vertical noborder">
-            <h2>Finding your Product</h2>
+            <div class="block-title">
+                <h2>Finding your Product</h2>
+            </div>
             <div class="block vertical noborder">
                 {#each Object.keys($product.findingProduct) as key}
                     <Input bind:input={$product.findingProduct[key]} />

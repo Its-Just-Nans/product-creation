@@ -5,6 +5,7 @@
         name: "not-set",
         question: "Question not set",
         subtext: "",
+        placeholder: "",
     };
     let style = `<style>
         input[type="radio"] {
@@ -65,7 +66,7 @@
         <p>
             <label for={`${input.name}-value`}>{input.question}</label>
         </p>
-        <input type="text" id={`${input.name}-value`} bind:value={input.value} />
+        <input type="text" id={`${input.name}-value`} bind:value={input.value} placeholder={input.placeholder} />
     {/if}
 </div>
 
@@ -74,7 +75,9 @@
         background-color: initial;
         outline: none;
         border: 0px;
-        border-bottom: 1px solid black;
+    }
+    input[type="text"]::placeholder {
+        color: LightSlateGray;
     }
     .label-style {
         padding: 5px;

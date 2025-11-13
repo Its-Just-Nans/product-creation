@@ -6,6 +6,7 @@ export const product = writable({
         question: "What is the name of this product?",
         name: "name",
         value: "",
+        placeholder: "Enter product name",
     },
     isVirtual: {
         type: "radio",

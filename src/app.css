@@ -35,6 +35,11 @@ body {
     display: flex;
     flex: 1;
     flex-direction: column;
+    padding: 50px;
+}
+#app > * {
+    border: 1px solid black;
+    border-bottom: none;
 }
 
 .block {
@@ -77,10 +82,10 @@ body {
     text-align: center;
 }
 
-.bright {
-    border-right: 1px solid #000;
-}
-
 .wei {
     font-weight: bold;
+}
+
+.block-title {
+    align-self: center;
 }

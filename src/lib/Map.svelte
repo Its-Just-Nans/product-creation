@@ -1,17 +1,12 @@
-<style>
-    path:hover {
-        fill: black;
-    }
-</style>
-
 <svg
-    width="100%"
+    width="1000"
     height="500"
     class="svgMap-map-image"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     style="overflow: hidden; "
-    ><g
+>
+    <g
         id="viewport-20240331142812322"
         class="svg-pan-zoom_viewport"
         transform="matrix(0.5294705008888816,0,0,0.5294705008888816,-29.470500888881656,-14.999985694885254)"
@@ -1681,3 +1676,9 @@
         ></path></g
     ></svg
 >
+
+<style>
+    path:hover {
+        fill: black;
+    }
+</style>
